@@ -95,9 +95,12 @@ where $M_{ij}$ are the standard contour moments. This centroid becomes the refer
 Using the camera intrinsics from a pinhole camera model, each object centroid is projected into a 3D ray:
 
 $$
-\mathbf{r}(u,v) = K^{-1}
+\mathbf{p}_c =
+z \, K^{-1}
 \begin{bmatrix}
-u \\ v \\ 1
+u\\
+v\\
+1
 \end{bmatrix}
 $$
 
@@ -109,13 +112,22 @@ $$
 
 ### 4. Homogeneous Coordinate Transform
 
-To convert from the camera frame to the world frame, this work uses a homogeneous rigid transform:
+To convert the point from the camera frame to the world frame, a homogeneous rigid transform is applied:
 
 $$
-\mathbf{p}_w =
+\begin{bmatrix}
+x_w\\
+y_w\\
+z_w\\
+1
+\end{bmatrix}
+=
 T_{c \rightarrow w}
 \begin{bmatrix}
-x_c \\ y_c \\ z_c \\ 1
+x_c\\
+y_c\\
+z_c\\
+1
 \end{bmatrix}
 $$
 
@@ -124,12 +136,12 @@ where
 $$
 T_{c \rightarrow w} =
 \begin{bmatrix}
-R & t \\
-0 & 1
+R & t\\
+0\ 0\ 0 & 1
 \end{bmatrix}
 $$
 
-Here, $R$ is the camera rotation matrix and $t$ is the translation vector obtained from Gazebo model state information.
+Here, $R \in \mathbb{R}^{3 \times 3}$ is the rotation matrix and $t \in \mathbb{R}^{3}$ is the translation vector from camera frame to world frame.
 
 ### 5. Metric Box Dimension Estimation
 
