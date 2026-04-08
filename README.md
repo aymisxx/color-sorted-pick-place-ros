@@ -126,7 +126,7 @@ $$
 \mathbf{p}_w^h = T_{c\to w}\.\mathbf{p}_c^h
 $$
 
-where $\mathbf{p}_c^h = [x_c,\ y_c,\ z_c,\ 1]^T$ is the point in homogeneous camera-frame coordinates, $\mathbf{p}_w^{\mathrm{h}}$ = $[x_w,\ y_w,\ z_w,\ 1]^T$ is the corresponding point in homogeneous world-frame coordinates, and $T_{c\to w}$ is the rigid transformation from camera frame to world frame.
+where $\mathbf{p}_c^{h} = [x_c,\, y_c,\, z_c,\, 1]^T$ is the point in homogeneous camera-frame coordinates, $\mathbf{p}_w^{h} = [x_w,\, y_w,\, z_w,\, 1]^T$ is the corresponding point in homogeneous world-frame coordinates, and $T_{c\to w}$ is the rigid transformation from camera frame to world frame.
 
 Here, $R \in \mathbb{R}^{3 \times 3}$ is the rotation matrix and $t \in \mathbb{R}^{3}$ is the translation vector from camera frame to world frame.
 
