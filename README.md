@@ -124,20 +124,20 @@ Equivalently, in homogeneous coordinates,
 
 $$
 \begin{bmatrix}
-x_w\\
-y_w\\
-z_w\\
+x_w \\
+y_w \\
+z_w \\
 1
 \end{bmatrix}
 =
 \begin{bmatrix}
-R & t\\
-\mathbf{0}_{1\times3} & 1
+R_{3\times 3} & t_{3\times 1} \\
+0\ 0\ 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-x_c\\
-y_c\\
-z_c\\
+x_c \\
+y_c \\
+z_c \\
 1
 \end{bmatrix}
 $$
