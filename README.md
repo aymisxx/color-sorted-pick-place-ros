@@ -354,4 +354,8 @@ This video shows the manipulator performing block sorting behavior in simulation
 
 This work was completed in an academic context as part of **Dr. Nakul Gopalan’s CSE 598: Perception in Robotics** course at **Arizona State University**, where it originally appeared as a pick-and-place ROS assignment involving an environment, planning setup, perception pipeline, and state machine. This repository reframes that work as a compact robotics work while preserving the underlying technical ideas and implementation structure.
 
+## License
+
+> **MIT License**
+
 ---
