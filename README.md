@@ -112,7 +112,15 @@ $$
 
 ### 4. Homogeneous Coordinate Transform
 
-To convert the point from the camera frame to the world frame, a homogeneous rigid transform is applied:
+To convert a 3D point from the camera frame to the world frame, the project applies a rigid-body coordinate transformation. In standard vector form,
+
+$$
+\mathbf{p}_w = R\,\mathbf{p}_c + t
+$$
+
+where $\mathbf{p}_c = [x_c\ y_c\ z_c]^T$ is the point in the camera frame, $\mathbf{p}_w = [x_w\ y_w\ z_w]^T$ is the corresponding point in the world frame, $R \in \mathbb{R}^{3\times3}$ is the rotation matrix, and $t \in \mathbb{R}^{3}$ is the translation vector.
+
+Equivalently, in homogeneous coordinates,
 
 $$
 \begin{bmatrix}
@@ -122,22 +130,15 @@ z_w\\
 1
 \end{bmatrix}
 =
-T_{c \rightarrow w}
+\begin{bmatrix}
+R & t\\
+\mathbf{0}_{1\times3} & 1
+\end{bmatrix}
 \begin{bmatrix}
 x_c\\
 y_c\\
 z_c\\
 1
-\end{bmatrix}
-$$
-
-where
-
-$$
-T_{c \rightarrow w} =
-\begin{bmatrix}
-R & t\\
-0\ 0\ 0 & 1
 \end{bmatrix}
 $$
 
